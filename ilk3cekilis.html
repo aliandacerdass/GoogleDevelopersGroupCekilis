@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uzay Yuruyusu</title>
+    <title>GDG Bursa Astronomik Çekiliş</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Rajdhani:wght@400;600&display=swap"
       rel="stylesheet"
@@ -524,7 +524,9 @@
         "Dogukaan BA***"
       ];
 
-      const WINNERS = [1, 2, 3];
+      const WINNERS = [...Array(PARTICIPANTS.length).keys()]
+  .sort(() => Math.random() - 0.5)
+  .slice(0, 3);
 
       const app = document.getElementById("app");
       const confettiCanvas = document.getElementById("confetti");
